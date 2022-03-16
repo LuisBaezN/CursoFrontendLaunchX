@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastani</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    seccion {
+        float: left;
+        height: 100px;
+        width: 100%;
+        background: #ccc;
+        padding: 20px;
+    }
+
+    /* Estilo de footer */
+    footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+</style>
+
+<body>
+
+    <form action="accion.js" id="datos del pastel" method="post">
+        <hr>
+        <seccion>
+            <h3>
+                Datos de su orden:
+            </h3>
+        </seccion>
+
+        <h4>
+            Sabor(es):
+        </h4>
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" id="s1" name="sabor1" value="chocolate">
+                    <label for="s1">Chocolate</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sabor2" id="s2" value="vainilla">
+                    <label for="s2">Vainilla</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sabor3" id="s3" value="fresa">
+                    <label for="s3">Fresa</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sabor4" id="s4" value="piñon">
+                    <label for="s4">Piñón</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sabor5" id="s5" value="chocoflan">
+                    <label for="s5">Chocoflan</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sabor6" id="s6" value="tres-leches">
+                    <label for="s6">Tres leches</label>
+                </td>
+            </tr>
+        </table>
+
+        <h4>
+            Diseño:
+        </h4>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="dise1" id="d1" value="tradicional">
+                    <label for="d1">Tradicional</label>
+                </td>
+                <td>
+                    <input type="radio" name="dise2" id="d2" value="basico">
+                    <label for="d2">Básico</label>
+                </td>
+                <td>
+                    <input type="radio" name="dise3" id="d3" value="refinado">
+                    <label for="d3">Refinado</label>
+                </td>
+                <td>
+                    <input type="radio" name="dise4" id="d4" value="premium">
+                    <label for="d4">Premium</label>
+                </td>
+            </tr>
+        </table>
+
+        <label for="seri">Serie: </label>
+        <input type="text" name="serie" id="seri">
+
+        <label for="deta">Detalles extra: </label>
+        <input type="text" name="detalles" id="deta">
+
+        <hr>
+
+        <seccion>
+            <h3>
+                Datos Personales:
+            </h3>
+        </seccion>
+
+        <label for="nom">Nombre:</label>
+        <input type="text" name="nombre" id="nom">
+        <br>
+        <label for="ape">Apellido: </label>
+        <input type="text" name="apellido" id="ape">
+        <br>
+        <label for="tel">Teléfono: </label>
+        <input type="tel" name="telefono" id="tel">
+        <br>
+        <label for="cor">Correo: </label>
+        <input type="email" name="correo" id="cor">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    <br>
+    <a href="./home_cliente.html">
+        <button>Cancelar pedido y regresar</button>
+    </a>
+
+    <footer>
+        <a href="#">Privacidad</a>
+        <a href="./nosotros.html">Nosotros</a>
+    </footer>
+</body>

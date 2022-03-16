@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastani</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* Estilo de header */
+    header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+
+    .cent_obj {
+        text-align: center;
+    }
+
+    /* Crear 2 columnas con la misma posición en la fila */
+    sabor {
+        float: left;
+        width: 30%;
+        height: 300px;
+        /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+    dise {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px;
+    }
+
+    descrip {
+        float: left;
+        padding: 20px;
+        background-color: rgba(11, 161, 111, 0.795);
+        height: 200px;
+    }
+
+    /* Clear floats after the columns */
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Estilo de footer */
+    footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+
+        sabor,
+        dise {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>Bienvenido a Pastani</h1>
+    </header>
+
+    <div class="cent_obj">
+        <img src="./assets/logo.png" alt="" width="300px">
+        <br>
+        <a href="./orden.html">
+            <button>Ordenar</button>            
+            <!--También se puede usar: <input type="button" value="Ordenar">-->
+        </a>
+    </div>
+    
+    <hr>
+
+    <section>
+        <sabor>
+            <h3>
+                Sabores:
+            </h3>
+            <ol>
+                <li>Chocolate......................$30.00</li>
+                <li>Vainilla..........................$28.00</li>
+                <li>Fresa............................$35.00</li>
+                <li>Piñón............................$40.00</li>
+                <li>Chocoflan......................$37.00</li>
+                <li>Tres leches....................$32.00</li>
+            </ol>
+        </sabor>
+            
+        <dise>
+            <h3>
+                Diseños:
+            </h3>
+            <table>
+                <tr>
+                    <th>Tradicional $50.00</th>
+                    <th>Básico $100.00</th>
+                    <th>Refinado $150.00</th>
+                    <th>Premium $300.00</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./assets/c_trad.jpg" alt="" width="170px">
+                    </td>
+                    <td>
+                        <img src="./assets/c_basi.jpg" alt="" width="180px">
+                    </td>
+                    <td>
+                        <img src="./assets/c_refi.jpg" alt="" width="180px">
+                    </td>
+                    <td>
+                        <div class="cent_obj">
+                            <img src="./assets/c_prem.jpg" alt="" width="130px">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </dise>
+    </section>
+
+    <descrip>
+        <h3>
+            Cómo funciona?
+        </h3>
+        <p>
+            Los precios de su pastel se suman de acuerdo a su elección. Los diseños pueden ser de cualquier serie, por lo que debe hacernos saber cuál es. Tome en cuenta que debe
+            escribir bien el nombre de esta.
+        </p>
+    </descrip>
+
+    <footer>
+        <a href="#">Privacidad</a>
+        <a href="./nosotros.html">Nosotros</a>
+    </footer>
+
+</body>
+</html>
