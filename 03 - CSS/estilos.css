@@ -1,0 +1,244 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vaccine{
+    background-image: url(./assets/vaccine.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 700px;
+}
+
+.vac-brands{
+    background-image: url(./assets/vac-brands.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 100%;
+}
+
+.container1{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.glass{
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0%;
+}
+
+h1{
+    color: rgba(43,75,201,255);
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.pos-ide{
+    text-indent: 100px;
+    position: fixed;
+    top: 15px;
+}
+
+.blue-b{
+    background-color: rgba(53,85,211,255);
+    position: fixed;
+    height:  50px;
+    width: 150px;
+    border-radius: 7%;
+    top: 20px;
+    right: 120px;
+    text-align: center;
+    
+}
+
+.text-bb{
+    color: white;
+    font-weight: 600;
+}
+
+.container2{
+    width: 45%;
+    height: 50px;
+    position: fixed;
+    right: 300px;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-it{
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+p{
+    color: #6d7b93;
+    font-weight: 600;
+}
+
+.base-fig{
+    width: 200px; 
+    height: 200px; 
+    border-top: 200px solid #f4f6fb;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+.triangle-d{
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(0 0, 75px 75px, 100% 0);
+}
+
+.triangle-l{
+    clip-path: polygon(100% 0, 100px 100px, 200% 100%);
+}
+
+.p-position1{
+    position: absolute;
+    top: 100px;
+}
+
+.p-position2{
+    position: absolute;
+    top: 400px;
+    right: 575px;
+}
+article{
+    width: 400px;
+}
+
+h2{
+    font-size: 50px;
+    font-weight: 900;
+    color: #1f3e72;
+}
+.a-position1{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+.mini-b{
+    height: 30px;
+    width: 30px;
+    background-color: #e9f1fe;
+    border-radius: 20%;
+    display: grid;
+    place-items: center;
+}
+
+.mini-b-c{
+    background-color: #fff7db;
+}
+
+.mini-bt{
+    height: 30px;
+    width: fit-content;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6d7b93;
+}
+
+.fcws{
+    color: #1f3e72;
+    font-weight: 600;
+    font-size: 20px;
+}
+.dp-it1{
+    width: 170px;
+    position: absolute;
+    top: 450px;
+    left: 150px;
+}
+
+.dp-it2{
+    width: 180px;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+}
+
+.dp-it3{
+    width: 315px;
+    position: absolute;
+    top: 530px;
+    left: 150px;
+}
+
+.dp-it4{
+    width: 12%;
+    position: relative;
+    top: 15px;
+    left: 50px;
+}
+
+.dp-it5{
+    width: 9%;
+    position: relative;
+    top: 15px;
+    left: 130px;
+}
+
+.dp-it6{
+    width: 15%;
+    position: relative;
+    top: 15px;
+    left: 230px;
+}
+
+
+.dpf-gl{
+    position: absolute;
+    top: 570px;
+    left: 150px;
+    border: solid;
+    padding: 1px;
+    border-radius: 3px;
+    width: 900px;
+    height: 100px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.d-vacc-text{
+    position: absolute;
+    top: 620px;
+    left: 200px;
+}
+
+.d-vacc-date{
+    position: absolute;
+    top: 620px;
+    left: 400px;
+}
+
+.d-vacc-vacc{
+    position: absolute;
+    top: 620px;
+    left: 570px;
+}
+
+.p-submit{
+    position: absolute;
+    top: 620px;
+    left: 870px;
+}
+
+
+.shadow{
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
+}
