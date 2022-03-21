@@ -30,9 +30,16 @@ article{
     width: 400px;
 }
 
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 /*############ Backgronds ############*/
 
 .vaccine{
+    margin: 0;
+    padding: 0;
     background-image: url(./assets/vaccine.jpg);
     background-repeat: no-repeat;
     background-position: top right;
@@ -45,6 +52,23 @@ article{
     background-size: contain;
     height: 170px;
     width: 100%;
+}
+
+.nurse{
+    height: 500px;
+    width: 500px;
+    background-image: url(./assets/nurse.png);
+    background-repeat: no-repeat;
+    background-position: 150px;
+}
+
+.medic{
+    width: 300px;
+    height: 600px;
+    background-image: url(./assets/medic.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    right: 150px;
 }
 
 /*############## Containers ################*/
@@ -71,7 +95,7 @@ article{
     height: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .container-art{
@@ -88,6 +112,58 @@ article{
     border-radius: 10%;
 }
 
+.container-box-alt{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-menu{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 700px;
+    top: 1500px;
+    display: flex;
+}
+
+.container-box-box{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 50px;
+}
+
+.container-foot{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.container-law{
+    width: 700px;
+    height: 50px;
+    position: inherit;
+    display: flex;
+    justify-items: space-between;
+}
+
+.container-inf{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    left: 150px;
+    display: flex;
+    justify-content: space-between;
+}
 /*######### Geometric forms ##########*/
 
 .base-fig{
@@ -107,13 +183,17 @@ article{
     clip-path: polygon(100% 0, 100px 100px, 200% 100%);
 }
 
+.triangle-r{
+    clip-path: polygon(0 0, 100px 100px, 0 50%);
+}
+
 .blue-b{
     background-color: rgba(53,85,211,255);
     position: fixed;
     height:  50px;
     width: 150px;
-    border-radius: 7%;
-    top: 20px;
+    border-radius: 10px;
+    top: 30px;
     right: 120px;
     text-align: center;
     
@@ -122,6 +202,7 @@ article{
 .text-bb{
     color: white;
     font-weight: 600;
+    line-height: normal;
 }
 
 .mini-b{
@@ -131,6 +212,14 @@ article{
     border-radius: 20%;
     display: grid;
     place-items: center;
+}
+
+.mini-b-p{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    left: 20px;
 }
 
 .mini-b-c{
@@ -145,6 +234,16 @@ article{
     font-size: 15px;
     font-weight: 600;
     color: #6d7b93;
+}
+
+.button-b1{
+    width: 150px;
+    height: 50px;
+    background-color: #e9f1fe;
+    color: #2f4fcd;
+    border-radius: 10px;
+    position: relative;
+    left: 30px;
 }
 
 /*############ Positioning and dimentions ###############*/
@@ -219,6 +318,10 @@ article{
     left: 230px;
 }
 
+.dp-it-c1{
+    width: 200px;
+}
+
 .dpf-gl{
     position: absolute;
     top: 570px;
@@ -268,6 +371,12 @@ article{
     top: 100px;
 }
 
+.p-triangle4{
+    position: relative;
+    top: 100px;
+
+}
+
 .dp-cont-box{
     position: relative;
     height: 200px;
@@ -290,6 +399,69 @@ article{
 
 }
 
+.dp-art2{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 400px;
+}
+
+.dp-menu{
+    position: absolute;
+    top: 250px;
+    left: 5px;
+    width: 400px;
+}
+
+.dp-art3{
+    height: 400px;
+    position: relative;
+    left: 150px;
+    top: 150px;
+}
+
+.dp-triangle4{
+    position: absolute;
+    right: 0px;
+    top: 2300px;
+}
+
+.dp-img{
+    top: 2700px;
+}
+
+.dp-footer{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 250px;
+    background-color: #e9f1fe;
+}
+
+.dp-art-alt{
+    width: 150px;
+    height: 200px;
+    top: 50px;
+
+}
+
+.dp-footer-l1{
+    position: absolute;
+    bottom: 100px;
+    right: 300px;
+}
+
+.dp-footer-l2{
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+}
+
+.dp-footer-l3{
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+}
 
 /*################# Efects###############*/
 
@@ -313,4 +485,51 @@ article{
     font-size: small;
     line-height: normal;
     font-weight: 500;
+}
+
+.alt-c{
+    background-color: rgba(53,85,211,255);
+    color: white;
+}
+
+
+/*##################### Menu #######################*/
+
+.tree{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #d2d2d2;
+}
+
+.tree li {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 15px 10px;
+  }
+
+.col-box{ 
+    position: relative; 
+    padding-left: 35px !important;
+}
+
+.col-box ul { display: none; }
+
+.col-box input:checked ~ ul { display: block; }
+
+.col-box input[type=checkbox] { display: none; }
+
+.col-box label:after {
+    content: "\0002B";
+    position: absolute;
+    top: 0; left: 340px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(38, 29, 160);
+    transition: all 0.5s;
+}
+
+.col-box input:checked ~ label:after { 
+    color: #b80505;
+    transform: rotate(45deg);
 }

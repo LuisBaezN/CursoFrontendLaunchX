@@ -97,7 +97,14 @@
     <form action="./acction.js" id="vacc-inf" method="post">
         <div class="d-vacc-text"><input type="text" name="place" id="place"></div>
         <div class="d-vacc-date"><input type="date" name="date-v" id="date-v"></div>
-        <div class="d-vacc-vacc"><input type="text" name="vaccine" id="vaccine"></div>
+        <div class="d-vacc-vacc">
+            <select name="v-brand" id="v-brand">
+                <option value="A">Astrazeneca</option>
+                <option value="S">Sinovac</option>
+                <option value="P">Pfizer</option>
+                <option value="M">Moderna</option>
+            </select>
+        </div>
         <div class="p-submit"><input type="submit" value="Submit"></div>
     </form>
 
@@ -185,9 +192,283 @@
         </section>
     </section>
 
+    <!--//////////////////////////Third section/////////////////////-->
 
+    <div class="base-fig triangle-r p-triangle4"></div>
 
+    <section class="nurse "></section>    
 
+    <section class="container-fig"></section>
+
+    <section class="container-menu ">
+        <article class="dp-art2">
+            <h2 style="font-size: x-large;"> Preparations Before Vaccine</h2>
+            <p>
+                The succes of vaccines is strongly influenced
+                by the strength of the immune syste. Therefore
+                there are several things that can be  tried to
+                make the COVID-19 vaccine work:
+            </p>
+        </article>
+
+        <div class="dp-menu"> 
+            <ul class="tree">
+                <li class="col-box">
+                    <input type="checkbox" name="one" id="one">
+                    <label for="one" class="h2-csw">Avoid alcoholic beverages</label>
+                    <ul class=" no-bullets">
+                        <li>
+                            <p>
+                                Diverse studies have proven that alcohol consumption reduce the effectivity of the vaccine, so is
+                                recomended to avoid drink alcohol at all.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-box">
+                    <input type="checkbox" name="two" id="two">
+                    <label for="two" class="h2-csw">Avoid stress</label>
+                    <ul class=" no-bullets">
+                        <li>
+                            <p>
+                                Stress has a profound effect on immune work.
+                                Moreover, prolonged stress can increase cortisol
+                                production and oxidative stress in the body.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-box">
+                    <input type="checkbox" name="tree" id="tree">
+                    <label for="tree" class="h2-csw">Eat healty food</label>
+                    <ul class=" no-bullets">
+                        <li>
+                            <p>
+                                Your body needs nutrients to build new cells, thus, is necesary eat a balanced range of ingredients
+                                in your meals. 
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-box">
+                    <input type="checkbox" name="four" id="four">
+                    <label for="four" class="h2-csw">Get enough sleep</label>
+                    <ul class=" no-bullets"> 
+                        <li>
+                            <p>
+                                When you sleep, your body can repair brain damage and helps to reduce streess in your immune system.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-box">
+                    <input type="checkbox" name="five" id="five">
+                    <label for="five" class="h2-csw">Excercise or physical activity</label>
+                    <ul class=" no-bullets">
+                        <li>
+                            <p>
+                                If you present any side effect you probably won't feel like you can excercise, however physical activity
+                                improves the blood presure wich transport the properties of the vaccine faster.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!--//////////////////////////Forth section/////////////////////-->
+
+    <div class="base-fig triangle-l dp-triangle4"></div>
+
+    <div class="medic dp-triangle4 dp-img"></div>
+    
+
+    <article class="dp-art3">
+        <h2 style="font-size: x-large;">Emergency contact</h2>
+        <p>
+            Contact one of the contacts below if you or your family
+            feel unwell and have similar symptoms such as COVID-19. 
+            Make sure you also take care of yourself before 
+            reporting to us:
+        </p>
+    </article>
+
+    <section class="container-box-box">
+        <section class="container-box-alt">
+            <div class="container-it dp-it-c1">
+                <div class="mini-b mini-b-p">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#2b4bc9" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 style="font-size: medium;">Call</h2>
+                    <p style="font-size: x-small">021.123.145.14</p>
+                </div>
+            </div>
+        
+            <a href="#">
+                <div class="mini-bt button-b1">Call Now</div>
+            </a>
+        </section>
+
+        <section class="container-box-alt">
+            <div class="container-it dp-it-c1">
+                <div class="mini-b mini-b-p">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#2b4bc9" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 style="font-size: medium;">Chat</h2>
+                    <p style="font-size: x-small;">021.123.145.14</p>
+                </div>
+           </div>
+
+           <a href="#">
+                <div class="mini-bt button-b1 alt-c">Chat Now</div>
+           </a>
+            
+        </section>
+
+        <section class="container-box-alt">
+            <div class="container-it dp-it-c1">
+                <div class="mini-b mini-b-p"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#2b4bc9" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                </svg></div>
+                <div>
+                    <h2 style="font-size: medium;">Video Call</h2>
+                    <p style="font-size: x-small;">021.123.145.14</p>
+                </div>
+            </div>
+        
+            <a href="#">
+                <div class="mini-bt button-b1">Video Call Now</div>
+            </a>
+            
+        </section>
+
+        <section class="container-box-alt">
+            <div class="container-it dp-it-c1">
+                <div class="mini-b mini-b-p"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#2b4bc9" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg></div>
+                <div>
+                    <h2 style="font-size: medium;">Message</h2>
+                    <p style="font-size: x-small;">021.123.145.14</p>
+                </div>
+            </div>
+
+            <a href="#">
+                <div class="mini-bt button-b1">Message Now</div>
+            </a>
+        </section>
+    </section>
+
+    
+    <!--////////////////////////////Footer//////////////////////////-->
+
+    
+    <section class="dp-footer">
+        <article class="dp-art3 dp-art-alt">
+            <h2 style="font-size: medium;">Vaccination</h2>
+            <p style="font-size: x-small; line-height: normal;">
+                Our goal is to help the world free from the ongoing pandemic
+            </p>
+        </article>
+
+        <section class="container-foot">
+            <article class="dp-footer-l1">
+                <ul class="no-bullets">
+                    <li><h2 style="font-size: medium;">About</h2></li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">About us</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">Features</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">News & Blog</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="dp-footer-l2">
+                <ul class="no-bullets">
+                    <li><h2 style="font-size: medium;">Company</h2></li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">How we work</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">Capital</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">Security</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="dp-footer-l3">
+                <ul class="no-bullets">
+                    <li><h2 style="font-size: medium;">Support</h2></li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">FAQs</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">Support Center</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p style="font-size: x-small; line-height: normal;">Contact Us</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="container-inf">
+            <div style="width: fit-content;">
+                <p style="font-size: x-small; line-height: normal;">
+                    @2021 Vaccination. All rights reserved
+                </p>
+            </div>
+
+            <section class="container-law">
+                <div style="width: 150px;">
+                    <a href="#">
+                        <p style="font-size: x-small; line-height: normal;">
+                            Terms and agreements
+                        </p>
+                    </a>
+                </div>
+    
+                <div style="width: 150px;">
+                    <a href="#">
+                        <p style="font-size: x-small; line-height: normal;">
+                            Privacy Policy
+                        </p>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </section>
 
 
 
