@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./poke-d.css">
+</head>
+
+<body>
+
+    <!--////////////////// Head ////////////////////-->
+
+    <section class="cont-head dpc-rect-h">
+        <section class="img-head-t">
+            <h1>pokedex</h1>
+        </section>
+    </section>
+
+    <!--////////////////// Body ////////////////////-->    
+
+    <section class="img-body-i">
+        
+        <!-- Info & form -->
+
+        <h2>Hola entrenadores!</h2>
+        <p>
+            En esta pokedex puedes buscar información de algún pokemón,
+            ya sea por su nombre o por su numeración. 
+        </p>
+            
+        <div class="cont-form">
+            <form action="./poke-d.js" id="poke-req" method="post">
+                <label for="num">Número: </label>
+                <input type="number" placeholder="123" name="numero" id="num">
+          
+                <label for="nom">Nombre: </label>
+                <input type="text" placeholder="Evee" name="nombre" id="nom">
+                   
+                <br>
+                <br>
+
+                <input type="submit" value="Buscar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </div>
+        
+        <div class="img-pokedex">
+            <div class="img-err-pokemon"></div>
+            <div class="cont-inf">
+                <div class="dpc-nt">000</div>
+                <div class="dpc-nom">---</div>
+                <div class="dpc-nt">---</div>
+            </div>
+        </div>
+
+        <div class="cont-buttons"></div>
+    </section>
+</body>
+
+<div class="dpc-space"></div>
+
+
+<!--/////////////////// Footer //////////////////////-->
+
+<footer>
+    <section class="cont-pok-b">
+        <div class="img-pok-b"></div>
+        <div class="img-pok-b"></div>
+    </section>
+
+    <section class="cont-pok-b dpc-pb">
+        <div class="img-pok-b"></div>
+        <div class="img-pok-b"></div>
+    </section>
+    
+    <script src="poke-d.js"></script>
+</footer>
+</html>

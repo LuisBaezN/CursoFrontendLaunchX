@@ -1,0 +1,173 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*///////////////////// HTML elements ////////////////////*/
+
+h1{
+    color: rgba(255, 255, 255, 0);
+}
+
+h2{
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+
+p{
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(1, 14, 4);
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./assets/stars_2.jpg); /*Change to stars or wood*/
+    background-repeat: repeat;
+    background-position: cover;
+}
+
+/*/////////////////////// Images /////////////////////////*/
+
+.img-head-t{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./assets/pokedex_logo.png);
+    background-repeat: no-repeat;
+    width: 375px;
+    height: 136px;
+    position: relative;
+    top: 32px;
+}
+
+.img-body-i{
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    background-image: url(./assets/paisaje.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    z-index: -2;
+}
+
+.img-pokedex{
+    background-image: url(./assets/pokedex.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 150px;
+    background-position: center;
+    width: 100%;
+    height: 637px;
+    z-index: -1;
+    display: grid;
+    place-items: center;
+}
+
+.img-pok-b{
+    background-image: url(./assets/pokeball_a.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.img-err-pokemon{
+    background-image: url(./assets/missigno_a.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 10px;
+    z-index: 0;
+}
+
+/*//////////////////// Containers ///////////////////////*/
+
+.cont-head{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkslateblue;
+}
+
+.cont-form{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    top: 100px;
+}
+
+.cont-pok-b{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-inf{
+    width: 300px;
+    height: 219px;
+    background-color: rgba(32, 178, 171, 0.473);
+    background-position: center;
+    position: relative;
+    top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cont-buttons{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(137, 43, 226, 0.637);
+    position: absolute;
+    top: 665px;
+}
+
+/*////////////////// Geometric forms ////////////////////*/
+
+
+
+/*//////////// Dimensions, positions & color ////////////*/
+
+.dpc-pb{
+    position: relative;
+    top: 100px;
+}
+
+.dpc-space{
+    position: relative;
+    height: 20px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.dpc-nom{
+    background-color: rgba(34, 32, 178, 0.664);
+    
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
+
+.dpc-nt{
+    background-color: rgba(178, 32, 32, 0.664);
+    
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
