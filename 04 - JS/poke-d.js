@@ -9,6 +9,13 @@ const fetchPokemon = () => {
         if (res.status != "200") {
             console.log(res);
             pokeImage("./assets/missigno_a.png")
+            pNumero('000')
+            pNombre('MissingNo')
+            types("normal", "???")
+            let mab = ['---','---','---','---','---','---'];
+            console.log(mab[0])
+            estad(mab);
+            reset_block();
         }
         else {
             return res.json();
@@ -44,19 +51,53 @@ const fetchPokemon = () => {
             }
 
             let stats = data.stats;
-            
-            let i = 0;
-            let stat = 0;
-            let st = "";
-            for (i; i < stats.length; i = i +1){
-                stat = stats[i];
-                st = stat.base_stat;
-                console.log("Antes de la función \ni: "+i+"\nstat: "+st);
-                astats(st, i);
-                console.log("Aespués de la función")
+
+            estad(stats)
+
+            reset_block();
+
+            let moves = data.moves;
+
+            i = 0;
+            stat = 0;
+            st = "";
+
+            for (i; i < moves.length; i++){
+                stat = moves[i];
+                st = stat.move.name;
+                abilitys(st)
             }
+            
         }
     });
+}
+
+const estad = (statv) => {
+    let i = 0;
+    let stat = 0;
+    let st = "";
+    for (i; i < statv.length; i++){
+        stat = statv[i];
+        if (stat == '---'){
+            astats(stat, i);
+        }
+        else{
+            st = stat.base_stat;
+            astats(st, i);
+        }
+    }
+}
+
+const reset_block = () => {
+    let a_list = document.getElementById("abilitys");
+    let a_block = document.getElementById("abilitys-block")
+    a_list.remove();
+    a_block.innerHTML = '<select name="habilidades" id="abilitys" size="4" style="width: 200px;"></select>'
+}
+
+const abilitys = (ab) => {
+    const abi_place = document.getElementById("abilitys");
+    abi_place.innerHTML += "<option>" + ab + "</option>";
 }
 
 const astats = (s, i) => {
