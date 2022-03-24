@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="./poke-d.css">
 </head>
 
 <body>
-
     <!--////////////////// Head ////////////////////-->
 
-    <section class="cont-head dpc-rect-h">
+    <section class="cont-head">
         <section class="img-head-t">
             <h1>pokedex</h1>
         </section>
     </section>
 
-    <!--////////////////// Body ////////////////////-->    
+    <!--////////////////// Body ////////////////////-->  
 
     <section class="img-body-i">
-        
         <!-- Info & form -->
 
         <h2>Hola entrenadores!</h2>
@@ -28,52 +27,76 @@
             En esta pokedex puedes buscar información de algún pokemón,
             ya sea por su nombre o por su numeración. 
         </p>
-            
-        <div class="cont-form">
-            <form action="./poke-d.js" id="poke-req" method="post">
-                <label for="num">Número: </label>
-                <input type="number" placeholder="123" name="numero" id="num">
-          
-                <label for="nom">Nombre: </label>
-                <input type="text" placeholder="Evee" name="nombre" id="nom">
-                   
-                <br>
-                <br>
 
-                <input type="submit" value="Buscar">
-                <input type="reset" value="Limpiar">
-            </form>
+        <div class="cont-form">          
+            <label for="nom">Nombre/Número: </label>
+            <input type="text" placeholder="Charmander" name="nombre" id="nom">
+                   
+            <br>
+            <br>
+
+            <button onclick="fetchPokemon()">Buscar</button>
+            
         </div>
-        
+
         <div class="img-pokedex">
-            <div class="img-err-pokemon"></div>
+            <img src="./assets/pokeball.png" alt="Pokemon" id="img" width="150px">
             <div class="cont-inf">
-                <div class="dpc-nt">000</div>
-                <div class="dpc-nom">---</div>
-                <div class="dpc-nt">---</div>
+                <div class="cont-s">
+                    <div class="dpc-n" id="n" onclick="fetchPokemon()">000</div>
+                    <div class="dpc-nom" id="pnom" onclick="fetchPokemon()">---</div>
+                </div>
+                
+                <div class="cont-s dpc-cont-s">
+                    <div class="dpc-nt" id="t2" onclick="fetchPokemon()">---</div>
+                    <div class="dpc-nt" id="t1" onclick="fetchPokemon()">---</div>
+                </div>
+
+                <div class="cont-e">
+                    <div class="cont-ec">
+                        <div class="font-c dpc-sn">hp: </div>
+                        <div class="font-c dpc-sd" id="estad0">---</div>
+
+                        <div class="font-c dpc-sn">spd: </div>
+                        <div class="font-c dpc-sd" id="estad5">---</div>
+                    </div>
+                    <div class="cont-ec">
+                        <div class="font-c dpc-sn">attk: </div>
+                        <div class="font-c dpc-sd" id="estad1">---</div>
+
+                        <div class="font-c dpc-sn">sattk: </div>
+                        <div class="font-c dpc-sd" id="estad3">---</div>
+                    </div>
+                    <div class="cont-ec">
+                        <div class="font-c dpc-sn">def: </div>
+                        <div class="font-c dpc-sd" id="estad2">---</div>
+
+                        <div class="font-c dpc-sn">sdef: </div>
+                        <div class="font-c dpc-sd" id="estad4">---</div>
+                    </div>
+                </div>
+
+                <div class="cont-m"></div>
             </div>
         </div>
-
-        <div class="cont-buttons"></div>
     </section>
+
+    <div class="dpc-space"></div>
+
+    <!--/////////////////// Footer //////////////////////-->
+
+    <footer>
+        <section class="cont-pok-b">
+            <div class="img-pok-b"></div>
+            <div class="img-pok-b"></div>
+        </section>
+
+        <section class="cont-pok-b dpc-pb">
+            <div class="img-pok-b"></div>
+            <div class="img-pok-b"></div>
+        </section>
+        
+        <script src="poke-d.js"></script>
+    </footer>
 </body>
-
-<div class="dpc-space"></div>
-
-
-<!--/////////////////// Footer //////////////////////-->
-
-<footer>
-    <section class="cont-pok-b">
-        <div class="img-pok-b"></div>
-        <div class="img-pok-b"></div>
-    </section>
-
-    <section class="cont-pok-b dpc-pb">
-        <div class="img-pok-b"></div>
-        <div class="img-pok-b"></div>
-    </section>
-    
-    <script src="poke-d.js"></script>
-</footer>
 </html>
