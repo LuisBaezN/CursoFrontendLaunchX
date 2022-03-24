@@ -1,2 +1,2 @@
 # CursoFrontendLaunchX
-Prácticas resueltas correspondiente al curso de Frontend impartido por LaunchX
+Prácticas resueltas correspondientes al curso de Frontend impartido por LaunchX
