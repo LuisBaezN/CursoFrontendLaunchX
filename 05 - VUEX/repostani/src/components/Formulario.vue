@@ -21,8 +21,6 @@
             <button @click="submitForm">Ordenar</button>
         </form>
 
-        <button @click="limpiarp">Limpar pedidos</button>
-
 
         <!--
         <ul>

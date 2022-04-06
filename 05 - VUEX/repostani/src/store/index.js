@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import { createStore, Store } from 'vuex'
 
 export default createStore({
   state: {
@@ -21,7 +21,9 @@ export default createStore({
     nombre: null,
     apellido: null,
     numero: null,
-    correo: null
+    correo: null,
+
+    pedi: null
   },
   getters: {
   },
@@ -30,8 +32,8 @@ export default createStore({
       state.sabores = [state.sabor, ... state.sabores];
     },
     setPedido(state) {
-      let ord = `["${state.nombre}","${state.apellido}","${state.numero}","${state.correo}",
-        "${state.sabores}","${state.dise}","${state.serie}","${state.detalles}"]`;
+      let ord = `${state.nombre} ${state.apellido}, ${state.numero}, ${state.correo}
+      Sabor(es): ${state.sabores} Diseño: ${state.dise} Serie: ${state.serie} Detalles: ${state.detalles}-`;
       if (localStorage.getItem("pedidos") == null){
         localStorage.setItem("pedidos", "");
       }
@@ -40,6 +42,42 @@ export default createStore({
       console.log(prevC);
       localStorage.setItem("pedidos", prevC);
       state.sabores = [];
+    },
+    getTableAct(){
+      let ped = localStorage.getItem('pedidos');
+      let sec = document.getElementById("TB");
+      let cont = 1;
+      let carry = 0;
+      for (let i = 0; i < ped.length; i++){
+        if (ped[i] == '-'){
+          sec.innerHTML += `<option>${cont}: ` + ped.slice(carry, i) + "</option>";
+          cont++;
+          carry = i + 1;
+        }
+      }      
+    },
+    borPed( state ) {
+      let ind = state.pedi;
+      let ped = localStorage.getItem('pedidos');
+      let cont = 1;
+      let carry = 0;
+      let lh = '';
+      let rh = '';
+      for (let i = 0; i < ped.length; i++){
+        if (ped[i] == '-'){
+          if (cont == ind){
+            lh = ped.slice(0, carry);
+            rh = ped.slice(i);
+            console.log(rh)
+            if (rh[0] == '-' && cont == 1) {rh = ped.slice(i+1);}
+
+            localStorage.setItem('pedidos', lh + rh);
+            break;
+          }
+          cont++;
+          carry = i;
+        }
+      }
     }
   },
   actions: {
@@ -48,6 +86,12 @@ export default createStore({
     },
     addPedido( contex) {
       contex.commit('setPedido');
+    },
+    getTable( contex ) {
+      contex.commit('getTableAct');
+    },
+    quitPed( contex ) {
+      contex.commit('borPed')
     }
   },
   modules: {

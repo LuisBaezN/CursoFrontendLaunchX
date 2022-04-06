@@ -11,7 +11,7 @@
             </select>
 
             <label>Serie: </label>
-            <input type="text" placeholder="Evangelion" required v-model="serie">
+            <input type="text" placeholder="Evangelion" v-model="serie">
 
             <label>Detalles extra: </label>
             <input type="text" v-model="detalles">
