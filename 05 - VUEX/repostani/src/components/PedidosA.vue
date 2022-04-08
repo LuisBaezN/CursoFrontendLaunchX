@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h2>Pedidos</h2>
         <button @click="actualizar">Actualizar pedidos</button>
         <br>
         <div id="tabla">

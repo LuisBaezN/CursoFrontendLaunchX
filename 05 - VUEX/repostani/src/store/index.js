@@ -23,24 +23,104 @@ export default createStore({
     numero: null,
     correo: null,
 
-    pedi: null
+    pedi: null,
+
+    choco: 24.0,
+    vaini: 10.0,
+    fresa: 7.0,
+    pinon: 27.0,
+    leche: 55.0,
+    huevo: 77,
+    harin: 47.0,
+    azuca: 61.0  
   },
   getters: {
+    retChoco (state) {
+      return state.choco
+    },
+    retVaini (state) {
+      return state.vaini
+    },
+    retFresa (state) {
+      return state.fresa
+    },
+    retPinon (state) {
+      return state.pinon
+    },
+    retLeche (state) {
+      return state.leche
+    },
+    retHuevo (state) {
+      return state.huevo
+    },
+    retHarin (state) {
+      return state.harin
+    },
+    retAzuca (state) {
+      return state.azuca
+    }
   },
   mutations: {
     setSabor(state){
       state.sabores = [state.sabor, ... state.sabores];
     },
     setPedido(state) {
+      let sg = state.sabores;
       let ord = `${state.nombre} ${state.apellido}, ${state.numero}, ${state.correo}
-      Sabor(es): ${state.sabores} Diseño: ${state.dise} Serie: ${state.serie} Detalles: ${state.detalles}-`;
-      if (localStorage.getItem("pedidos") == null){
-        localStorage.setItem("pedidos", "");
-      }
+      Sabor(es): ${sg} Diseño: ${state.dise} Serie: ${state.serie} Detalles: ${state.detalles}-`;
+      if (localStorage.getItem("pedidos") == null){localStorage.setItem("pedidos", "");}
       let prevC = localStorage.getItem("pedidos");
       prevC += ord;
-      console.log(prevC);
       localStorage.setItem("pedidos", prevC);
+
+      for (let i = 0; i<sg.length; i++) {
+        switch (sg[i]) {
+          case 'chocolate':
+            state.choco -= 0.5;
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+          case 'vainilla':
+            state.vaini -= 0.2;
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+          case 'fresa':
+            state.fresa -= 0.2;
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+          case 'piñón':
+            state.pinon -= 0.07;
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+          case 'chocoflan':
+            state.choco -= 0.25;
+            state.vaini -= 0.01;
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+          case 'tres leches':
+            state.leche -= 1.7;
+            state.huevo -= 4;
+            state.harin -= 1.2;
+            state.azuca -= 0.7;
+            break;
+        }
+      }
+      console.log(state.azuca -= 0.7)
+
       state.sabores = [];
     },
     getTableAct(){
