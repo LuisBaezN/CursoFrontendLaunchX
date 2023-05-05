@@ -27,7 +27,7 @@ Para esta práctica se nos pidió consumir información de una API para mostrarl
 
 Se nos pidió que le solicitáramos a la API su imagen, tipo, estadísticas y habilidades para así mostrarla en nuestra página.
 
-La página elaborada es:
+La página elaborada se puede consultar en el siguiente [link](https://purple-cliff-098532c10.3.azurestaticapps.net/ "PokeAPI").
 
 ![pokedex](/assets/poke.jpeg)
 
